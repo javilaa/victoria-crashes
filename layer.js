@@ -22,16 +22,16 @@ var layer = {
     'circle-color': {
 
       // Name of property to drive style from
-      property: 'FATALITY',
+      property: 'POLICE_ATTEND',
 
       // Type of styling. Can be 'exponential', 'interval', or 'categorical'
-      type: 'interval',
+      type: 'categorical',
 
       // Change colors based on values. 0 is blue, and 1 is red.
       // See http://www.colourlovers.com/palettes for some colour suggestions
       stops: [
-        [0, '#4E89ED'],
-        [1, '#FF5E7C'],
+        ['Yes', '#4E89ED'],
+        ['No', '#FF5E7C'],
       ]
 
     // Properties are separated by commas
@@ -39,20 +39,20 @@ var layer = {
 
     // All circle paint properties are defined similarly
     'circle-opacity': {
-      property: 'FATALITY',
-      type: 'interval',
+      property: 'POLICE_ATTEND',
+      type: 'categorical',
       stops: [
-        [0, 0.25],
-        [1, 0.75],
+        ['Yes', 0.25],
+        ['No', 0.75],
       ]
     },
 
     'circle-radius': {
-      property: 'FATALITY',
-      type: 'exponential',
+      property: 'POLICE_ATTEND',
+      type: 'categorical',
       stops: [
-        [0, 1.5],
-        [9, 15],
+        ['Yes', 1.5],
+        ['No', 5],
       ]
     },
 
